@@ -23,7 +23,7 @@ on t2.ProductID = t1.ProductID
 group by t1.productname
 
 --4 List all Customer Cities and total products ordered by that city.
-select t4.city , sum(t1.ProductID) "total products" 
+select t4.city , COUNT(t1.ProductID) "total products" 
 from dbo.Products t1 
 inner join dbo.[Order Details] t2
 on t2.ProductID = t1.ProductID 
